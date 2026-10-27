@@ -61,7 +61,7 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.0",
     "@tailwindcss/vite": "^4.3.3",
-    "@types/chrome": "^0.0.287",
+    "@types/chrome": "^0.3.6",
     "open-props": "^1.7.23",
     "prettier": "^3.9.10",
     "prettier-plugin-svelte": "^3.5.2",
