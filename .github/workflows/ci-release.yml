@@ -21,10 +21,10 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Node.js 22
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
@@ -56,7 +56,7 @@ jobs:
           find releases -maxdepth 1 -type f -name 'cove-*-v*.zip' ! -name "*-v${version}.zip" -delete
 
       - name: Upload MV3 extension artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: cove-mv3-bundles
           if-no-files-found: error
@@ -82,13 +82,13 @@ jobs:
       contents: write
     steps:
       - name: Download verified release artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: cove-mv3-bundles
           path: releases
 
       - name: Publish immutable release notes & assets
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           generate_release_notes: true
           fail_on_unmatched_files: true
