@@ -5,7 +5,8 @@ export const LANGUAGE_LABELS: Record<LanguageCode, string> = {
   hi: 'हिन्दी (Hindi)',
   es: 'Español',
   de: 'Deutsch',
-  ja: '日本語'
+  ja: '日本語',
+  tr: 'Türkçe'
 };
 
 const DICT: Record<LanguageCode, Record<string, string>> = {
@@ -168,6 +169,38 @@ const DICT: Record<LanguageCode, Record<string, string>> = {
     goodAfternoon: 'こんにちは。',
     goodEvening: 'こんばんは。',
     quietNight: '静かな夜です。'
+  },
+  tr: {
+    tagline: 'Web\'in sakin köşesi.',
+    searchPlaceholder: 'Web\'de ara, açık bir sekmeye git veya komut için > yaz…',
+    commandPlaceholder: 'Komut, sekme, not ya da yer imi yaz…',
+    dashboard: 'Panel',
+    minimal: 'Minimal',
+    blank: 'Boş',
+    workMode: 'Çalışma saatleri',
+    personalMode: 'Kişisel zaman',
+    quickLinks: 'Hızlı Erişim',
+    tabTriage: 'Sekme Traj',
+    tabSessions: 'Oturumlar',
+    focusEngine: 'Odak',
+    readLater: 'Sonra Oku',
+    notes: 'Notlar',
+    weather: 'Hava',
+    rssFeed: 'RSS Akışı',
+    clock: 'Saat',
+    countdown: 'Geri Sayım',
+    customFrame: 'Gömülü',
+    settings: 'Ayarlar ve Veriler',
+    cycleWallpaper: 'Arka planı değiştir',
+    surpriseMe: 'Şaşırt beni',
+    tabsHealthy: 'Cove sekmelerinizi sağlıklı tutar.',
+    localFirstBadge: '100% yerel · Sıfır takip',
+    splitSearch: 'Ayrık arama',
+    saveSession: 'Sekmeleri kaydet',
+    goodMorning: 'Günaydın.',
+    goodAfternoon: 'İyi günler.',
+    goodEvening: 'İyi akşamlar.',
+    quietNight: 'Gece sessizi.'
   }
 };
 

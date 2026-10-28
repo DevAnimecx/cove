@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { I18N_KEYS, LANGUAGE_LABELS, hasTranslation, t } from '../src/lib/i18n.ts';
 
-const LANGUAGES = ['en', 'hi', 'es', 'de', 'ja'];
+const LANGUAGES = ['en', 'hi', 'es', 'de', 'ja', 'tr'];
 
 test('ships labels and dictionaries for every supported language', () => {
   assert.deepEqual(Object.keys(LANGUAGE_LABELS).sort(), [...LANGUAGES].sort());

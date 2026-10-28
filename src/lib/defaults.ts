@@ -1,6 +1,7 @@
 import type {
   CountdownItem,
   CoveSettings,
+  LanguageCode,
   NoteItem,
   QuickLinkGroup,
   QuickLinkItem,
@@ -134,6 +135,20 @@ function detectDefaultTempUnit(): 'C' | 'F' {
 }
 
 /**
+ * Picks the initial UI language from the browser's own locale so first-run
+ * users get a dictionary they can read. English stays the global default.
+ */
+function detectDefaultLanguage(): LanguageCode {
+  try {
+    const lang = navigator.language || '';
+    if (lang.toLowerCase().startsWith('tr')) return 'tr';
+  } catch {
+    // ignore
+  }
+  return 'en';
+}
+
+/**
  * Resolves an honest initial city/coordinates from the browser's real IANA timezone
  * before optional browser Geolocation or user city search.
  */
@@ -150,6 +165,7 @@ function detectLocationFromTimezone(): { city: string; latitude: number; longitu
       'Europe/London': { city: 'London', latitude: 51.5072, longitude: -0.1276 },
       'Europe/Paris': { city: 'Paris', latitude: 48.8566, longitude: 2.3522 },
       'Europe/Berlin': { city: 'Berlin', latitude: 52.52, longitude: 13.405 },
+      'Europe/Istanbul': { city: 'İstanbul', latitude: 41.0082, longitude: 28.9784 },
       'Asia/Tokyo': { city: 'Tokyo', latitude: 35.6762, longitude: 139.6503 },
       'Asia/Singapore': { city: 'Singapore', latitude: 1.3521, longitude: 103.8198 },
       'Asia/Dubai': { city: 'Dubai', latitude: 25.2048, longitude: 55.2708 },
@@ -168,7 +184,7 @@ export function createDefaultSettings(): CoveSettings {
     version: 8,
     onboardingDismissed: false,
     userName: '',
-    language: 'en',
+    language: detectDefaultLanguage(),
     theme: 'dark',
     preset: 'cobalt',
     layoutMode: 'dashboard',

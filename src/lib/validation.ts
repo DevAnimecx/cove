@@ -521,7 +521,7 @@ export function sanitizeImportedSettings(raw: unknown, base: CoveSettings): Cove
   out.version = base.version;
   out.onboardingDismissed = asBoolean(raw.onboardingDismissed, base.onboardingDismissed);
   out.userName = asTrimmedString(raw.userName, 80);
-  out.language = asEnum(raw.language, ['en', 'hi', 'es', 'de', 'ja'] as const, base.language) as LanguageCode;
+  out.language = asEnum(raw.language, ['en', 'hi', 'es', 'de', 'ja', 'tr'] as const, base.language) as LanguageCode;
   out.theme = asEnum(raw.theme, ['system', 'dark', 'light'] as const, base.theme);
   out.preset = asEnum(raw.preset, ['cobalt', 'harbor', 'nordic', 'cedar', 'dusk'] as const, base.preset);
   out.layoutMode = asEnum(
