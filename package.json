@@ -59,7 +59,7 @@
     "release:check": "npm run typecheck && npm run build && npm test && npm run test:core && npm run verify"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
     "@tailwindcss/vite": "^4.3.3",
     "@types/chrome": "^0.0.287",
     "open-props": "^1.7.23",
@@ -68,7 +68,7 @@
     "svelte": "^5.19.0",
     "tailwindcss": "^4.3.3",
     "terser": "^5.51.2",
-    "typescript": "^5.7.2",
-    "vite": "^6.0.7"
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
   }
 }
